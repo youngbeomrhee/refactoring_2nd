@@ -120,7 +120,7 @@ describe('string for producers', function () {
     };
     // const prov = new Province(data);
     // expect(prov.shortfall).equal(0);
-    // expect(()=>new Province(data)).not.to.throw();
-    expect(()=>new Province(data)).to.throw();
+    // expect(() =>new Province(data)).not.to.throw();
+    expect(() =>new Province(data)).to.throw();
   });
 });
