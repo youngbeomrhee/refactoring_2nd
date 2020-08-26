@@ -2,6 +2,7 @@ const { expect, assert } = require('chai');
 const {defaultOwner} = require('../../src/ch006/ex006_encapsulate_variable/owner001');
 const {defaultOwner: defaultOwner2, getDefaultOwner} = require('../../src/ch006/ex006_encapsulate_variable/owner002');
 const {getDefaultOwner: getDefaultOwner2} = require('../../src/ch006/ex006_encapsulate_variable/owner003');
+const {Person} = require('../../src/ch006/ex006_encapsulate_variable/owner004');
 
 describe('owner', () => {
   it('getter : before refactoring', () => {
@@ -37,14 +38,20 @@ describe('owner', () => {
   });
 
   it('getter : record encapsulation', () => {
-    const owner1 = getDefaultOwner2();
-    const owner2 = getDefaultOwner2();
+    const owner1 = new Person();
+    const owner2 = new Person({firstName: "Robert", lastName: "Martin"});
 
     expect(owner1).to.deep.include({firstName: "Martin"});
     expect(owner1).to.deep.include({lastName: "Fowler"});
 
+    expect(owner2).to.deep.include({firstName: "Robert"});
+    expect(owner2).to.deep.include({lastName: "Martin"});
+
     owner2.firstName = 'Kent';
     owner2.lastName = 'Beck';
+
+    expect(owner2).to.deep.include({firstName: "Kent"});
+    expect(owner2).to.deep.include({lastName: "Beck"});
 
     expect(owner1).not.to.deep.include({firstName: "Kent"});
     expect(owner1).not.to.deep.include({lastName: "Beck"});
