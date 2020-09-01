@@ -1,6 +1,6 @@
-function readingsOutsideRange(station, min, max, range) {
+function readingsOutsideRange(station, range) {
   return station.readings
-  .filter(r => r.temp < min || r.temp > max);
+  .filter(r => r.temp < range.min || r.temp > range.max);
 }
 
 class NumberRange {
@@ -11,4 +11,4 @@ class NumberRange {
   get max() {return this._data.max;}
 }
 
-module.exports = {readingsOutsideRange}
+module.exports = {readingsOutsideRange, NumberRange}

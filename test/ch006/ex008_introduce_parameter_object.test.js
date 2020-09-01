@@ -1,8 +1,11 @@
 const { expect, assert } = require('chai');
 const {readingsOutsideRange} = require('../../src/ch006/ex008_introduce_parameter_object/range001');
 const {readingsOutsideRange: readingsOutsideRange2} = require('../../src/ch006/ex008_introduce_parameter_object/range002');
+const {readingsOutsideRange: readingsOutsideRange3, NumberRange} = require('../../src/ch006/ex008_introduce_parameter_object/range003');
+const {readingsOutsideRange: readingsOutsideRange4, NumberRange: NumberRange2} = require('../../src/ch006/ex008_introduce_parameter_object/range004');
+const {readingsOutsideRange: readingsOutsideRange5, NumberRange: NumberRange3, OperatingPlan} = require('../../src/ch006/ex008_introduce_parameter_object/range005');
 
-
+// sample
 const station = {
   name: "ZB1",
   readings: [
@@ -14,24 +17,51 @@ const station = {
   ]
 };
 
-const operationPlan = {
+const operatingPlan = {
   temperatureFloor: 51,
   temperatureCeiling: 53
 };
 
 describe('readingsOutsideRange', () => {
-  it('give the reading outside temperature outside range', () => {
+  it('should return readings outside range', () => {
+    let alerts = readingsOutsideRange(station, operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling);
 
-    let alerts = readingsOutsideRange(station, operationPlan.temperatureFloor, operationPlan.temperatureCeiling);
+    expect(alerts).to.eql([{temp: 47, time: "2016-11-10 09:10"}, {temp: 58, time: "2016-11-10 09:30"}]);
+  });
+
+  it('should return readings outside range : change parameters', () => {
+
+    let alerts = readingsOutsideRange2(station, operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling, null);
 
     expect(alerts).to.eql([{temp: 47, time: "2016-11-10 09:10"}, {temp: 58, time: "2016-11-10 09:30"}]);
   });
 
-  it('give the reading outside temperature outside range', () => {
+  it('should return readings outside range : change parameters from values to value object', () => {
 
-    let alerts = readingsOutsideRange2(station, operationPlan.temperatureFloor, operationPlan.temperatureCeiling);
+    const range = new NumberRange(operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling);
+    let alerts = readingsOutsideRange3(station, range);
+    expect(alerts).to.eql([{temp: 47, time: "2016-11-10 09:10"}, {temp: 58, time: "2016-11-10 09:30"}]);
+  });
+
+  it('should return readings outside range : move check method into value object class', () => {
+    const NumberRange = NumberRange2;
+
+    const range = new NumberRange(operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling);
+    let alerts = readingsOutsideRange4(station, range);
 
     expect(alerts).to.eql([{temp: 47, time: "2016-11-10 09:10"}, {temp: 58, time: "2016-11-10 09:30"}]);
   });
+
+  it('should return readings outside range : change parameters from values to value object again', () => {
+    const NumberRange = NumberRange3;
+
+    const operatingPlan = new OperatingPlan(51, 53);
+
+    const range = new NumberRange(operatingPlan);
+    let alerts = readingsOutsideRange5(station, range);
+
+    expect(alerts).to.eql([{temp: 47, time: "2016-11-10 09:10"}, {temp: 58, time: "2016-11-10 09:30"}]);
+  });
+
 
 });
