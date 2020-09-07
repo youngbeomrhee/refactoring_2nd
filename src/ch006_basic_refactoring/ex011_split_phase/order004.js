@@ -1,6 +1,6 @@
 function priceOrder(product, quantity, shippingMethod) {
   const priceData = calculatePricingData(product, quantity);
-  return applyShipping(priceData, shippingMethod);  // moveed to inline
+  return applyShipping(priceData, shippingMethod);  // moved to inline
 }
 
 function calculatePricingData(product, quantity) {  // 첫 번째 단계를 처리하는 함수

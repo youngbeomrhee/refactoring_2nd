@@ -1,8 +1,8 @@
 const { expect } = require('chai');
-const { printOwing } = require('../../src/ch006/ex001_extract_function/printOwing001');
-const { printOwing : printOwing2 } = require('../../src/ch006/ex001_extract_function/printOwing002');
-const { printOwing : printOwing3 } = require('../../src/ch006/ex001_extract_function/printOwing003');
-const { printOwing : printOwing4 } = require('../../src/ch006/ex001_extract_function/printOwing004');
+const { printOwing } = require('../../src/ch006_basic_refactoring/ex001_extract_function/printOwing001');
+const { printOwing : printOwing2 } = require('../../src/ch006_basic_refactoring/ex001_extract_function/printOwing002');
+const { printOwing : printOwing3 } = require('../../src/ch006_basic_refactoring/ex001_extract_function/printOwing003');
+const { printOwing : printOwing4 } = require('../../src/ch006_basic_refactoring/ex001_extract_function/printOwing004');
 
 let Clock = {
   today: {

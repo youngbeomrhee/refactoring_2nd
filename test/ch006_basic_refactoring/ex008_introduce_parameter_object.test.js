@@ -1,9 +1,9 @@
 const { expect, assert } = require('chai');
-const {readingsOutsideRange} = require('../../src/ch006/ex008_introduce_parameter_object/range001');
-const {readingsOutsideRange: readingsOutsideRange2} = require('../../src/ch006/ex008_introduce_parameter_object/range002');
-const {readingsOutsideRange: readingsOutsideRange3, NumberRange} = require('../../src/ch006/ex008_introduce_parameter_object/range003');
-const {readingsOutsideRange: readingsOutsideRange4, NumberRange: NumberRange2} = require('../../src/ch006/ex008_introduce_parameter_object/range004');
-const {readingsOutsideRange: readingsOutsideRange5, NumberRange: NumberRange3, OperatingPlan} = require('../../src/ch006/ex008_introduce_parameter_object/range005');
+const {readingsOutsideRange} = require('../../src/ch006_basic_refactoring/ex008_introduce_parameter_object/range001');
+const {readingsOutsideRange: readingsOutsideRange2} = require('../../src/ch006_basic_refactoring/ex008_introduce_parameter_object/range002');
+const {readingsOutsideRange: readingsOutsideRange3, NumberRange} = require('../../src/ch006_basic_refactoring/ex008_introduce_parameter_object/range003');
+const {readingsOutsideRange: readingsOutsideRange4, NumberRange: NumberRange2} = require('../../src/ch006_basic_refactoring/ex008_introduce_parameter_object/range004');
+const {readingsOutsideRange: readingsOutsideRange5, NumberRange: NumberRange3, OperatingPlan} = require('../../src/ch006_basic_refactoring/ex008_introduce_parameter_object/range005');
 
 // sample
 const station = {
@@ -31,7 +31,7 @@ describe('readingsOutsideRange', () => {
 
   it('should return readings outside range : change parameters', () => {
 
-    let alerts = readingsOutsideRange2(station, operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling, null);
+    let alerts = readingsOutsideRange2(station, operatingPlan.temperatureFloor, operatingPlan.temperatureCeiling);
 
     expect(alerts).to.eql([{temp: 47, time: "2016-11-10 09:10"}, {temp: 58, time: "2016-11-10 09:30"}]);
   });

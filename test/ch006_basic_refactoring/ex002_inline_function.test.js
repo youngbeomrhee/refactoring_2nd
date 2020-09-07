@@ -1,8 +1,8 @@
 const { expect, assert } = require('chai');
-const { rating } = require('../../src/ch006/ex002_inline_function/rating001');
-const { rating: rating2 } = require('../../src/ch006/ex002_inline_function/rating002');
-const { reportLines } = require('../../src/ch006/ex002_inline_function/reportLines001');
-const { reportLines: reportLines2 } = require('../../src/ch006/ex002_inline_function/reportLines002');
+const { rating } = require('../../src/ch006_basic_refactoring/ex002_inline_function/rating001');
+const { rating: rating2 } = require('../../src/ch006_basic_refactoring/ex002_inline_function/rating002');
+const { reportLines } = require('../../src/ch006_basic_refactoring/ex002_inline_function/reportLines001');
+const { reportLines: reportLines2 } = require('../../src/ch006_basic_refactoring/ex002_inline_function/reportLines002');
 
 describe('rating001', () => {
   it('should give rating 1 when late deliveries less than or equal to 5 ', () => {

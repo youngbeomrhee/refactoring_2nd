@@ -1,8 +1,8 @@
 const { expect, assert } = require('chai');
-const {price} = require('../../src/ch006/ex003_extract_variable/price001');
-const {price: price2} = require('../../src/ch006/ex003_extract_variable/price002');
-const {Order} = require('../../src/ch006/ex003_extract_variable/order001');
-const {Order: Order2} = require('../../src/ch006/ex003_extract_variable/order002');
+const {price} = require('../../src/ch006_basic_refactoring/ex003_extract_variable/price001');
+const {price: price2} = require('../../src/ch006_basic_refactoring/ex003_extract_variable/price002');
+const {Order} = require('../../src/ch006_basic_refactoring/ex003_extract_variable/order001');
+const {Order: Order2} = require('../../src/ch006_basic_refactoring/ex003_extract_variable/order002');
 
 describe('price001', () => {
   it('should price order which quantity is under 50', () => {

@@ -1,8 +1,8 @@
 const { expect, assert } = require('chai');
-const {priceOrder} = require('../../src/ch006/ex011_split_phase/order001');
-const {priceOrder: priceOrder2} = require('../../src/ch006/ex011_split_phase/order002');
-const {priceOrder: priceOrder3} = require('../../src/ch006/ex011_split_phase/order003');
-const {priceOrder: priceOrder4} = require('../../src/ch006/ex011_split_phase/order004');
+const {priceOrder} = require('../../src/ch006_basic_refactoring/ex011_split_phase/order001');
+const {priceOrder: priceOrder2} = require('../../src/ch006_basic_refactoring/ex011_split_phase/order002');
+const {priceOrder: priceOrder3} = require('../../src/ch006_basic_refactoring/ex011_split_phase/order003');
+const {priceOrder: priceOrder4} = require('../../src/ch006_basic_refactoring/ex011_split_phase/order004');
 
 describe('priceOrder', () => {
   const product = {
@@ -22,15 +22,15 @@ describe('priceOrder', () => {
   });
 
   it('should priceOrder and priceOrder2(splitted phase) return same value', () => {
-    expect(priceOrder2(product, 5, shippingMethod)).to.equal(priceOrder2(product, 5, shippingMethod));
+    expect(priceOrder2(product, 5, shippingMethod)).to.equal(priceOrder(product, 5, shippingMethod));
   });
 
   it('should priceOrder and priceOrder3(parameter is moved to intermediate data structure) return same value', () => {
-    expect(priceOrder3(product, 5, shippingMethod)).to.equal(priceOrder3(product, 5, shippingMethod));
+    expect(priceOrder3(product, 5, shippingMethod)).to.equal(priceOrder(product, 5, shippingMethod));
   });
 
   it('should priceOrder and priceOrder4(extracted to function) return same value', () => {
-    expect(priceOrder4(product, 5, shippingMethod)).to.equal(priceOrder3(product, 5, shippingMethod));
+    expect(priceOrder4(product, 5, shippingMethod)).to.equal(priceOrder(product, 5, shippingMethod));
   });
 
 });

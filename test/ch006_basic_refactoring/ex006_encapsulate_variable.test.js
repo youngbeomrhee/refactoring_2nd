@@ -1,8 +1,8 @@
 const { expect, assert } = require('chai');
-const {defaultOwner} = require('../../src/ch006/ex006_encapsulate_variable/owner001');
-const {defaultOwner: defaultOwner2, getDefaultOwner} = require('../../src/ch006/ex006_encapsulate_variable/owner002');
-const {getDefaultOwner: getDefaultOwner2} = require('../../src/ch006/ex006_encapsulate_variable/owner003');
-const {Person} = require('../../src/ch006/ex006_encapsulate_variable/owner004');
+const {defaultOwner} = require('../../src/ch006_basic_refactoring/ex006_encapsulate_variable/owner001');
+const {defaultOwner: defaultOwner2, getDefaultOwner} = require('../../src/ch006_basic_refactoring/ex006_encapsulate_variable/owner002');
+const {getDefaultOwner: getDefaultOwner2} = require('../../src/ch006_basic_refactoring/ex006_encapsulate_variable/owner003');
+const {Person} = require('../../src/ch006_basic_refactoring/ex006_encapsulate_variable/owner004');
 
 describe('owner', () => {
   it('getter : before refactoring', () => {

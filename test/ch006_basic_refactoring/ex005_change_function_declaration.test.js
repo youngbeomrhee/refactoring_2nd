@@ -1,12 +1,12 @@
 const { expect, assert } = require('chai');
-const {circum} = require('../../src/ch006/ex005_change_function_declaration/circum001');
-const {circumference} = require('../../src/ch006/ex005_change_function_declaration/circum002');
-const {circum: circum2, circumference: circumference2} = require('../../src/ch006/ex005_change_function_declaration/circum003');
-const {Book} = require('../../src/ch006/ex005_change_function_declaration/book001');
-const {Book: Book2} = require('../../src/ch006/ex005_change_function_declaration/book002');
-const {inNewEngland} = require('../../src/ch006/ex005_change_function_declaration/inNewEngland001');
-const {inNewEngland: inNewEngland2} = require('../../src/ch006/ex005_change_function_declaration/inNewEngland002');
-const {inNewEngland: inNewEngland3} = require('../../src/ch006/ex005_change_function_declaration/inNewEngland003');
+const {circum} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/circum001');
+const {circumference} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/circum002');
+const {circum: circum2, circumference: circumference2} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/circum003');
+const {Book} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/book001');
+const {Book: Book2} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/book002');
+const {inNewEngland} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/inNewEngland001');
+const {inNewEngland: inNewEngland2} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/inNewEngland002');
+const {inNewEngland: inNewEngland3} = require('../../src/ch006_basic_refactoring/ex005_change_function_declaration/inNewEngland003');
 
 describe('circum', () => {
   it('circum before refactoring : should calculate circumference given a radius', () => {

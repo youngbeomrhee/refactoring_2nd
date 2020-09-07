@@ -1,14 +1,14 @@
 const { expect, assert } = require('chai');
-const {acquireReading} = require('../../src/ch006/ex009_combine_functions_into_class/data/reading');
-const {baseCharge} = require('../../src/ch006/ex009_combine_functions_into_class/client1_001');
-const {base, taxableCharge} = require('../../src/ch006/ex009_combine_functions_into_class/client2_001');
-const {basicChargeAmount} = require('../../src/ch006/ex009_combine_functions_into_class/client3_001');
-const {basicChargeAmount: basicChargeAmount2} = require('../../src/ch006/ex009_combine_functions_into_class/client3_002');
-const {basicChargeAmount: basicChargeAmount3} = require('../../src/ch006/ex009_combine_functions_into_class/client3_003');
-const {baseCharge: baseCharge2} = require('../../src/ch006/ex009_combine_functions_into_class/client1_002');
-const {base: base2, taxableCharge: taxableCharge2} = require('../../src/ch006/ex009_combine_functions_into_class/client2_002');
-const {base: base3, taxableCharge: taxableCharge3} = require('../../src/ch006/ex009_combine_functions_into_class/client2_003');
-const {base: base4, taxableCharge: taxableCharge4} = require('../../src/ch006/ex009_combine_functions_into_class/client2_004');
+const {acquireReading} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/data/reading');
+const {baseCharge} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client1_001');
+const {base, taxableCharge} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client2_001');
+const {basicChargeAmount} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client3_001');
+const {basicChargeAmount: basicChargeAmount2} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client3_002');
+const {basicChargeAmount: basicChargeAmount3} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client3_003');
+const {baseCharge: baseCharge2} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client1_002');
+const {base: base2, taxableCharge: taxableCharge2} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client2_002');
+const {base: base3, taxableCharge: taxableCharge3} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client2_003');
+const {base: base4, taxableCharge: taxableCharge4} = require('../../src/ch006_basic_refactoring/ex009_combine_functions_into_class/client2_004');
 
 
 describe('data', () => {
