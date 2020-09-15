@@ -8,23 +8,10 @@ class Person {
     return this._name;
   }
   get courses() {
-    return this._courses.slice(); // 복제본을 전달
+    return this._courses;
   }
-  /* // add, remove 함수로 대체
   set courses(aList) {
     this._courses = aList;
-  }
-  */
-  addCourse(aCourse) {
-    this._courses.push(aCourse);
-  }
-  removeCourse(aCourse, fnIfAbsent = _ => { throw new RangeError(); }) {
-    const index = this._courses.indexOf(aCourse);
-    if(index === -1) {
-      fnIfAbsent();
-    } else {
-      this._courses.splice(index, 1);
-    }
   }
 }
 

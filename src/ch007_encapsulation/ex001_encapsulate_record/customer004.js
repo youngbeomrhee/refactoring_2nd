@@ -19,7 +19,7 @@ class CustomerData {
 const customer = new CustomerData(customerData);
 
 function getCustomerData() { return customer; }
-function getRawDataOfCustomers() { return customer._data; }
+// function getRawDataOfCustomers() { return customer._data; }
 function setRawDataOfCustomers(arg) { customerData = new CustomerData(arg); }
 
 // 복제된 데이터를 제공

@@ -1,7 +1,7 @@
 let {customerData} = require('./customerData');
 let _ = require('lodash');
 
-// 함수로 추출
+// 클래스로 추출
 class CustomerData {
   constructor(data) {
     this._data = data;
