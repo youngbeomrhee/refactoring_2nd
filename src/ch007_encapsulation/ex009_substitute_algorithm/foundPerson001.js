@@ -12,5 +12,4 @@ function foundPerson(people) {
   }
   return "";
 }
-
 module.exports = {foundPerson};
