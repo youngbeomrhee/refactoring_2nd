@@ -1,6 +1,5 @@
 function renderPerson(outStream, person) {
   outStream.write(`<p>${person.name}</p>\n`);
-  www.EBooksWorld.ir
   renderPhoto(outStream, person.photo);
   emitPhotoData(outStream, person.photo);
 }
@@ -18,3 +17,9 @@ function emitPhotoData(outStream, photo) {
   outStream.write(`<p>date: ${photo.date.toDateString()}</p>\n`);
   outStream.write(`<p>location: ${photo.location}</p>\n`);
 }
+
+function renderPhoto(outStream, aPhoto) {
+  outStream.write("");
+}
+
+module.exports = {renderPerson, listRecentPhotos}
