@@ -1,0 +1,16 @@
+function report(people) {
+  let youngest = people[0] ? people[0].age : Infinity;
+  let totalSalary = 0;
+  // 반복문 복제 후 중복제거
+  for (const p of people) {
+    if (p.age < youngest) youngest = p.age;
+    // totalSalary += p.salary;
+  }
+  for (const p of people) {
+    // if (p.age < youngest) youngest = p.age;
+    totalSalary += p.salary;
+  }
+  return `youngestAge: ${youngest}, totalSalary: ${totalSalary}`;
+}
+
+module.exports = {report}
