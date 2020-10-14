@@ -40,7 +40,7 @@ class MockStream {
   write(str) {
     this.data.push(str);
   }
-  read() {
+  toString() {
     return this.data.join('');
   }
 }
@@ -49,12 +49,12 @@ describe('photo001', () => {
   it('renderPerson', () => {
     const mockStream = new MockStream();
     renderPerson(mockStream, aPerson);
-    expect(mockStream.read()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
+    expect(mockStream.toString()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
   });
   it('listRecentPhotos', () => {
     const mockStream = new MockStream();
     listRecentPhotos(mockStream, photos);
-    expect(mockStream.read()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
+    expect(mockStream.toString()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
   });
 });
 
@@ -65,12 +65,12 @@ describe('photo002', () => {
   it('renderPerson', () => {
     const mockStream = new MockStream();
     renderPerson(mockStream, aPerson);
-    expect(mockStream.read()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
+    expect(mockStream.toString()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
   });
   it('listRecentPhotos', () => {
     const mockStream = new MockStream();
     listRecentPhotos(mockStream, photos);
-    expect(mockStream.read()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
+    expect(mockStream.toString()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
   });
 });
 
@@ -82,12 +82,12 @@ describe('photo003', () => {
   it('renderPerson', () => {
     const mockStream = new MockStream();
     renderPerson(mockStream, aPerson);
-    expect(mockStream.read()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
+    expect(mockStream.toString()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
   });
   it('listRecentPhotos', () => {
     const mockStream = new MockStream();
     listRecentPhotos(mockStream, photos);
-    expect(mockStream.read()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
+    expect(mockStream.toString()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
   });
 });
 
@@ -98,12 +98,12 @@ describe('photo004', () => {
   it('renderPerson', () => {
     const mockStream = new MockStream();
     renderPerson(mockStream, aPerson);
-    expect(mockStream.read()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
+    expect(mockStream.toString()).to.equal(`<p>Alex</p>\n<image stream>\n<p>title: holiday</p>\n<p>date: Fri May 10 2019</p>\n<p>location: Greece</p>\n`);
   });
   it('listRecentPhotos', () => {
     const mockStream = new MockStream();
     listRecentPhotos(mockStream, photos);
-    expect(mockStream.read()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
+    expect(mockStream.toString()).to.equal(`<div>\n<p>title: holiday 2020</p>\n<p>date: Sun May 10 2020</p>\n<p>location: Greece</p>\n</div>\n`);
   });
 });
 
