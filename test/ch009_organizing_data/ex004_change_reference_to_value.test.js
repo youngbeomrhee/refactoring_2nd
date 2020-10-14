@@ -23,6 +23,4 @@ describe('person', () => {
     expect(new TelephoneNumber('312', '555-0142').equals(new TelephoneNumber('312', '555-0142'))).equals(true);
     expect(new TelephoneNumber('312', '555-0142').equals(new TelephoneNumber('123', '555-0142'))).equals(false);
   });
-
-
 });
