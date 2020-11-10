@@ -35,9 +35,7 @@ class TelephoneNumber {
     this._number = number;
   }
   get areaCode()    {return this._areaCode;}
-  set areaCode(arg) {this._areaCode = arg;}
   get number() {return this._number;}
-  set number(arg) {this._number = arg;}
   // 객체의 값을 비교하는 메서드 커스터마이징
   equals(other) {
     return other instanceof TelephoneNumber
