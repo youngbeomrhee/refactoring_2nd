@@ -75,5 +75,4 @@ class NorwegianBlueParrot extends Bird {
   }
 }
 
-
 module.exports = {plumages}

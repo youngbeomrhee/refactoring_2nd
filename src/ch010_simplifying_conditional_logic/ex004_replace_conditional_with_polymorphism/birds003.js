@@ -37,7 +37,7 @@ class Bird {
 
 // 적합한 서브클래스의 인스턴스를 만들어 줄 팩터리 함수로 대체
 function plumage(bird) {
-  return new Bird(bird).plumage;
+  return new createBird(bird).plumage;
 }
 function airSpeedVelocity(bird) {
   return new createBird(bird).airSpeedVelocity;
